@@ -29,19 +29,34 @@ const gcd = require('../src/index');
 // ─── Banner ─────────────────────────────────────────────────────
 function banner() {
   const pkgVersion = require('../package.json').version;
-  console.log(chalk.red.bold(`
-     ██████╗ ██████╗██████╗ 
-    ██╔════╝██╔════╝██╔══██╗
-    ██║     ██║     ██║  ██║
-    ██║     ██║     ██║  ██║
-    ╚██████╗╚██████╗██████╔╝
-     ╚═════╝ ╚═════╝╚═════╝ 
-    `) + chalk.red.bold(`    ██████╗ ███████╗███████╗██╗ ██████╗ ███╗   ██╗
-    ██╔══██╗██╔════╝██╔════╝██║██╔═══██╗████╗  ██║
-    ██║  ██║█████╗  ███████╗██║██║   ██║██╔██╗ ██║
-    ██║  ██║██╔══╝  ╚════██║██║██║   ██║██║╚██╗██║
-    ██████╔╝███████╗███████║██║╚██████╔╝██║ ╚████║
-    ╚═════╝ ╚══════╝╚══════╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝`) + chalk.white.bold(`    Agent-Native AI Design Engine v${pkgVersion}\n`));
+  const cols = (process.stdout.columns || 80);
+  function center(text) {
+    const stripped = text.replace(/\x1b\[[0-9;]*m/g, '');
+    const pad = Math.max(0, Math.floor((cols - stripped.length) / 2));
+    return ' '.repeat(pad) + text;
+  }
+  function hr() {
+    const line = '─'.repeat(Math.min(56, cols - 4));
+    return center(`${chalk.dim(line)}`);
+  }
+
+  console.log('');
+  console.log(center(chalk.red.bold('     ██████╗ ██████╗██████╗ ')));
+  console.log(center(chalk.red.bold('    ██╔════╝██╔════╝██╔══██╗')));
+  console.log(center(chalk.red.bold('    ██║     ██║     ██║  ██║')));
+  console.log(center(chalk.red.bold('    ██║     ██║     ██║  ██║')));
+  console.log(center(chalk.red.bold('    ╚██████╗╚██████╗██████╔╝')));
+  console.log(center(chalk.red.bold('     ╚═════╝ ╚═════╝╚═════╝ ')));
+  console.log('');
+  console.log(center(chalk.red.bold('    ██████╗ ███████╗███████╗██╗ ██████╗ ███╗   ██╗')));
+  console.log(center(chalk.red.bold('    ██╔══██╗██╔════╝██╔════╝██║██╔═══██╗████╗  ██║')));
+  console.log(center(chalk.red.bold('    ██║  ██║█████╗  ███████╗██║██║   ██║██╔██╗ ██║')));
+  console.log(center(chalk.red.bold('    ██║  ██║██╔══╝  ╚════██║██║██║   ██║██║╚██╗██║')));
+  console.log(center(chalk.red.bold('    ██████╔╝███████╗███████║██║╚██████╔╝██║ ╚████║')));
+  console.log(center(chalk.red.bold('    ╚═════╝ ╚══════╝╚══════╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝')));
+  console.log('');
+  console.log(center(chalk.white.bold(`      Agent-Native AI Design Engine v${pkgVersion}`)));
+  console.log('');
 }
 
 // ─── Generate ───────────────────────────────────────────────────
