@@ -47,11 +47,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OpenCoworkAI/gentcodesign.git"
+    "url": "git+https://github.com/Atum246/gentcodesign.git"
   },
-  "homepage": "https://github.com/OpenCoworkAI/gentcodesign",
+  "homepage": "https://github.com/Atum246/gentcodesign",
   "bugs": {
-    "url": "https://github.com/OpenCoworkAI/gentcodesign/issues"
+    "url": "https://github.com/Atum246/gentcodesign/issues"
   },
   "engines": {
     "node": ">=18.0.0"
