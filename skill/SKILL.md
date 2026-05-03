@@ -159,6 +159,15 @@ const html = tpl.generate('dashboard', { theme: 'dark' });
 | `invoice` | Professional invoices |
 | `error_page` | Creative 404/500 pages |
 | `settings` | Tabs, toggles, sliders |
+| `social_feed` | Posts, reactions, comments, stories |
+| `documentation` | Sidebar nav, code blocks, API refs |
+| `email_template` | Responsive email layouts |
+| `waitlist` | Countdown, email capture, progress |
+| `kanban` | Columns, cards, drag indicators |
+| `music_player` | Controls, playlist, visualizations |
+| `checkout` | Cart → shipping → payment → confirm |
+| `timeline` | Vertical history, changelogs |
+| `testimonial` | Quotes, ratings, carousel |
 
 ## Template Engine (Instant Generation)
 

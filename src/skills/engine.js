@@ -343,6 +343,194 @@ Requirements:
 - Unsaved changes warning
 - Keyboard accessible`,
     scaffold: 'settings'
+  },
+
+  social_feed: {
+    name: 'Social Feed',
+    icon: '📱',
+    description: 'Social media feeds with posts, reactions, comments, and stories',
+    systemPrompt: `You are a social media UI designer. Create engaging social feed interfaces.
+Requirements:
+- Post cards with author avatar, name, timestamp
+- Text content with hashtag and mention highlighting
+- Image/media grid (1, 2, 3, 4 image layouts)
+- Reaction bar (like, comment, share, bookmark)
+- Like animation (heart burst effect)
+- Comment section with nested replies
+- Stories row at top (circular avatars with gradient borders)
+- Infinite scroll simulation
+- Floating compose button
+- Dark theme with vibrant accents
+- Smooth animations for interactions`,
+    scaffold: 'social'
+  },
+
+  documentation: {
+    name: 'Documentation',
+    icon: '📖',
+    description: 'Technical documentation with sidebar nav, code blocks, and API references',
+    systemPrompt: `You are a documentation designer. Create beautiful technical docs.
+Requirements:
+- Sidebar navigation with collapsible sections
+- Table of contents (sticky, highlights current section)
+- Code blocks with copy button and syntax highlighting
+- API reference tables (method, endpoint, parameters, response)
+- Inline code styling
+- Callout boxes (info, warning, tip, danger)
+- Breadcrumb navigation
+- Search functionality
+- Version selector
+- Previous/Next navigation at bottom
+- Dark code theme
+- Responsive sidebar that collapses on mobile`,
+    scaffold: 'docs'
+  },
+
+  email_template: {
+    name: 'Email Template',
+    icon: '✉️',
+    description: 'Responsive email templates with inline styles and fallbacks',
+    systemPrompt: `You are an email template designer. Create professional email templates.
+Requirements:
+- Table-based layout for email client compatibility
+- Inline CSS (email clients strip <style> tags)
+- Max-width 600px container
+- Preheader text
+- Header with logo/branding
+- Hero section with CTA button
+- Content sections with images
+- Footer with unsubscribe link
+- Social media icons
+- Responsive (media query for mobile)
+- System font stack
+- Alt text for images
+- Tested across email clients`,
+    scaffold: 'email'
+  },
+
+  waitlist: {
+    name: 'Waitlist / Coming Soon',
+    icon: '⏳',
+    description: 'Waitlist pages with countdown, email capture, and progress indicators',
+    systemPrompt: `You are a waitlist/coming-soon page designer. Create anticipation-building pages.
+Requirements:
+- Large countdown timer (days, hours, minutes, seconds)
+- Email capture form with validation
+- Progress bar showing signups vs goal
+- Social proof (X people joined)
+- Feature preview/teaser section
+- Animated background (gradient mesh or particles)
+- Social media links
+- Responsive design
+- Success state after signup
+- FOMO-inducing copy
+- Subtle animations throughout`,
+    scaffold: 'waitlist'
+  },
+
+  kanban: {
+    name: 'Kanban Board',
+    icon: '📋',
+    description: 'Kanban boards with columns, cards, drag indicators, and filters',
+    systemPrompt: `You are a Kanban board designer. Create functional project boards.
+Requirements:
+- Column layout (To Do, In Progress, Review, Done)
+- Cards with title, description, assignee, priority, due date
+- Color-coded priority badges
+- Avatar circles for assignees
+- Card count per column
+- Add card button per column
+- Drag indicator styling
+- Filter bar (by assignee, priority, label)
+- Column collapse/expand
+- Responsive: horizontal scroll on mobile
+- Card detail modal
+- Progress indicators`,
+    scaffold: 'kanban'
+  },
+
+  music_player: {
+    name: 'Music Player',
+    icon: '🎵',
+    description: 'Music player interfaces with controls, playlist, and visualizations',
+    systemPrompt: `You are a music player UI designer. Create beautiful audio interfaces.
+Requirements:
+- Album art display (large, centered)
+- Song title and artist name
+- Progress bar with current time / total time
+- Play/pause, skip, previous, shuffle, repeat buttons
+- Volume slider
+- Playlist sidebar with current song highlighted
+- Equalizer visualization (CSS-only bars)
+- Lyrics panel (toggleable)
+- Queue management
+- Responsive design
+- Smooth animations
+- Dark theme with vibrant accent`,
+    scaffold: 'music'
+  },
+
+  checkout: {
+    name: 'Checkout Flow',
+    icon: '💳',
+    description: 'Multi-step checkout with cart, shipping, payment, and confirmation',
+    systemPrompt: `You are a checkout flow designer. Create frictionless purchase experiences.
+Requirements:
+- Step indicator (Cart → Shipping → Payment → Confirmation)
+- Cart summary with product images, quantities, prices
+- Quantity adjustment buttons
+- Promo code input with apply button
+- Shipping address form
+- Shipping method selection (standard, express, overnight)
+- Payment form (card number, expiry, CVV)
+- Order summary sidebar (sticky)
+- Trust badges (secure, money-back)
+- Place order button with loading state
+- Confirmation page with order number
+- Responsive: single column on mobile`,
+    scaffold: 'checkout'
+  },
+
+  timeline: {
+    name: 'Timeline',
+    icon: '📅',
+    description: 'Vertical timelines for history, changelogs, and activity feeds',
+    systemPrompt: `You are a timeline designer. Create beautiful chronological layouts.
+Requirements:
+- Vertical line connecting events
+- Event cards alternating left/right (desktop)
+- Event dot/icon on the timeline line
+- Date, title, description per event
+- Color-coded event categories
+- Expandable details
+- Image support
+- Animated entry on scroll
+- Responsive: single column on mobile
+- Filter by category
+- Load more button
+- Current time indicator`,
+    scaffold: 'timeline'
+  },
+
+  testimonial: {
+    name: 'Testimonials',
+    icon: '💬',
+    description: 'Testimonial sections with quotes, ratings, and carousel',
+    systemPrompt: `You are a testimonial designer. Create trust-building social proof sections.
+Requirements:
+- Quote cards with avatar, name, role, company
+- Star rating display
+- Carousel/slider navigation
+- Grid layout option
+- Company logo display
+- Quote marks styling
+- Subtle hover effects
+- Responsive: 1 column mobile, 2-3 desktop
+- Masonry layout option
+- Video testimonial cards
+- Verified badge
+- Background pattern or gradient`,
+    scaffold: 'testimonials'
   }
 };
 
@@ -394,7 +582,16 @@ class DesignSkillsEngine {
       hero: ['hero', 'above the fold', 'headline', 'banner', 'splash'],
       invoice: ['invoice', 'receipt', 'billing', 'payment', 'finance'],
       error_page: ['404', 'error', 'not found', '500', 'maintenance'],
-      settings: ['settings', 'preferences', 'config', 'options', 'profile']
+      settings: ['settings', 'preferences', 'config', 'options', 'profile'],
+      social_feed: ['social', 'feed', 'post', 'twitter', 'instagram', 'timeline'],
+      documentation: ['docs', 'documentation', 'api', 'reference', 'guide', 'manual'],
+      email_template: ['email', 'newsletter', 'template', 'welcome email'],
+      waitlist: ['waitlist', 'coming soon', 'countdown', 'launch', 'beta'],
+      kanban: ['kanban', 'board', 'trello', 'task', 'project management'],
+      music_player: ['music', 'player', 'audio', 'playlist', 'song', 'spotify'],
+      checkout: ['checkout', 'payment flow', 'purchase', 'cart flow', 'order'],
+      timeline: ['timeline', 'history', 'changelog', 'activity feed', 'events'],
+      testimonial: ['testimonial', 'review', 'quote', 'social proof', 'feedback']
     };
 
     for (const [skillId, words] of Object.entries(keywords)) {

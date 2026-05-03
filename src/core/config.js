@@ -40,8 +40,80 @@ const DEFAULT_CONFIG = {
       deepseek: {
         name: 'DeepSeek',
         baseUrl: 'https://api.deepseek.com/v1',
-        models: ['deepseek-chat', 'deepseek-coder'],
+        models: ['deepseek-chat', 'deepseek-coder', 'deepseek-reasoner'],
         apiKey: ''
+      },
+      nvidia: {
+        name: 'NVIDIA NIM',
+        baseUrl: 'https://integrate.api.nvidia.com/v1',
+        models: ['meta/llama-3.1-405b-instruct', 'meta/llama-3.1-70b-instruct', 'mistralai/mixtral-8x22b-instruct-v0.1', 'nvidia/llama-3.1-nemotron-70b-instruct', 'deepseek-ai/deepseek-r1'],
+        apiKey: ''
+      },
+      groq: {
+        name: 'Groq',
+        baseUrl: 'https://api.groq.com/openai/v1',
+        models: ['llama-3.1-405b-reasoning', 'llama-3.1-70b-versatile', 'llama-3.1-8b-instant', 'mixtral-8x7b-32768'],
+        apiKey: ''
+      },
+      mistral: {
+        name: 'Mistral',
+        baseUrl: 'https://api.mistral.ai/v1',
+        models: ['mistral-large-latest', 'mistral-medium-latest', 'mistral-small-latest', 'codestral-latest'],
+        apiKey: ''
+      },
+      together: {
+        name: 'Together AI',
+        baseUrl: 'https://api.together.xyz/v1',
+        models: ['meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo', 'mistralai/Mixtral-8x22B-Instruct-v0.1', 'Qwen/Qwen2.5-72B-Instruct-Turbo'],
+        apiKey: ''
+      },
+      fireworks: {
+        name: 'Fireworks AI',
+        baseUrl: 'https://api.fireworks.ai/inference/v1',
+        models: ['accounts/fireworks/models/llama-v3p1-405b-instruct', 'accounts/fireworks/models/llama-v3p1-70b-instruct'],
+        apiKey: ''
+      },
+      cohere: {
+        name: 'Cohere',
+        baseUrl: 'https://api.cohere.com/v2',
+        models: ['command-r-plus', 'command-r', 'command-light'],
+        apiKey: ''
+      },
+      huggingface: {
+        name: 'Hugging Face',
+        baseUrl: 'https://api-inference.huggingface.co/v1',
+        models: ['meta-llama/Meta-Llama-3.1-405B-Instruct', 'mistralai/Mixtral-8x22B-Instruct-v0.1'],
+        apiKey: ''
+      },
+      azure: {
+        name: 'Azure OpenAI',
+        baseUrl: '',
+        models: ['gpt-4o', 'gpt-4', 'gpt-35-turbo'],
+        apiKey: ''
+      },
+      lmstudio: {
+        name: 'LM Studio (Local)',
+        baseUrl: 'http://localhost:1234/v1',
+        models: ['local-model'],
+        apiKey: 'lm-studio'
+      },
+      jan: {
+        name: 'Jan (Local)',
+        baseUrl: 'http://localhost:1337/v1',
+        models: ['local-model'],
+        apiKey: 'jan'
+      },
+      llamacpp: {
+        name: 'llama.cpp (Local)',
+        baseUrl: 'http://localhost:8080/v1',
+        models: ['local-model'],
+        apiKey: 'llamacpp'
+      },
+      textgen: {
+        name: 'text-generation-webui',
+        baseUrl: 'http://localhost:5000/v1',
+        models: ['local-model'],
+        apiKey: 'textgen'
       },
       openrouter: {
         name: 'OpenRouter',

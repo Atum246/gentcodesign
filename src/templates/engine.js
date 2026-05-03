@@ -4,6 +4,8 @@
  * Also serves as scaffolds for AI generation
  */
 
+const EXTRA_TEMPLATES = require('./extras');
+
 const TEMPLATES = {
   landing: {
     name: 'Modern Landing Page',
@@ -463,7 +465,7 @@ bar.style.background=['#ef4444','#f59e0b','#22c55e','#22c55e'][s-1]||'transparen
 
 class TemplateEngine {
   constructor() {
-    this.templates = TEMPLATES;
+    this.templates = { ...TEMPLATES, ...EXTRA_TEMPLATES };
   }
 
   list() {
@@ -491,7 +493,13 @@ class TemplateEngine {
       pricing: ['pricing', 'price', 'plan', 'subscription'],
       error404: ['404', 'error', 'not found', 'maintenance'],
       chat: ['chat', 'message', 'messenger', 'conversation'],
-      form: ['form', 'signup', 'register', 'wizard', 'survey']
+      form: ['form', 'signup', 'register', 'wizard', 'survey'],
+      ecommerce: ['shop', 'store', 'ecommerce', 'product', 'buy', 'cart'],
+      email: ['email', 'newsletter', 'welcome', 'notification'],
+      docs: ['docs', 'documentation', 'guide', 'api docs', 'reference'],
+      onboarding: ['onboarding', 'welcome', 'setup', 'getting started'],
+      admin: ['admin', 'panel', 'users', 'management', 'crm'],
+      saas: ['saas metrics', 'mrr', 'arr', 'churn', 'ltv', 'startup metrics']
     };
 
     for (const [id, keywords] of Object.entries(matches)) {

@@ -134,7 +134,7 @@ open http://localhost:3700/preview/<design-id>
 
 ---
 
-## 🎨 17 Design Skills
+## 🎨 26 Design Skills
 
 | Skill | What it makes |
 |-------|---------------|
@@ -155,6 +155,15 @@ open http://localhost:3700/preview/<design-id>
 | `invoice` | Professional invoices |
 | `error_page` | Creative 404/500 pages |
 | `settings` | Tabs, toggles, sliders |
+| `social_feed` | Posts, reactions, comments, stories |
+| `documentation` | Sidebar nav, code blocks, API refs |
+| `email_template` | Responsive email layouts |
+| `waitlist` | Countdown, email capture, progress |
+| `kanban` | Columns, cards, drag indicators |
+| `music_player` | Controls, playlist, visualizations |
+| `checkout` | Cart → shipping → payment → confirm |
+| `timeline` | Vertical history, changelogs |
+| `testimonial` | Quotes, ratings, carousel |
 
 Skills are auto-detected from your prompt. Or specify manually:
 
@@ -162,7 +171,7 @@ Skills are auto-detected from your prompt. Or specify manually:
 gentcodesign generate "admin panel" --skills dashboard data_table
 ```
 
-## ⚡ Instant Templates
+## ⚡ 12 Instant Templates
 
 No API key needed. Generates beautiful HTML instantly.
 
@@ -173,9 +182,15 @@ gentcodesign template pricing
 gentcodesign template chat
 gentcodesign template form
 gentcodesign template error404
+gentcodesign template ecommerce
+gentcodesign template email
+gentcodesign template docs
+gentcodesign template onboarding
+gentcodesign template admin
+gentcodesign template saas
 ```
 
-## 🤖 Supported Models
+## 🤖 20 Supported Providers
 
 | Provider | How to set up |
 |----------|---------------|
@@ -183,8 +198,21 @@ gentcodesign template error404
 | Anthropic | `gentcodesign config --set-key anthropic=sk-ant-xxx` |
 | Google Gemini | `gentcodesign config --set-key gemini=xxx` |
 | DeepSeek | `gentcodesign config --set-key deepseek=xxx` |
+| NVIDIA NIM | `gentcodesign config --set-key nvidia=nvapi-xxx` |
 | OpenRouter | `gentcodesign config --set-key openrouter=sk-or-xxx` |
+| Groq | `gentcodesign config --set-key groq=gsk_xxx` |
+| Mistral | `gentcodesign config --set-key mistral=xxx` |
+| Cohere | `gentcodesign config --set-key cohere=xxx` |
+| Together AI | `gentcodesign config --set-key together=xxx` |
+| Fireworks AI | `gentcodesign config --set-key fireworks=xxx` |
+| Replicate | `gentcodesign config --set-key replicate=r8_xxx` |
+| Hugging Face | `gentcodesign config --set-key huggingface=hf_xxx` |
+| Azure OpenAI | `gentcodesign config --set-key azure=xxx` |
 | Ollama | Local — no key needed, just run Ollama |
+| LM Studio | Local — no key needed, just run LM Studio |
+| Jan | Local — no key needed, just run Jan |
+| llama.cpp | Local — no key needed, just run the server |
+| text-generation-webui | Local — no key needed |
 | Custom | Any OpenAI-compatible endpoint |
 
 ## 📦 Export Formats

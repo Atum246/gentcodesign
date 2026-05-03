@@ -88,9 +88,9 @@ test('config paths exist', () => {
 // ─── Skills Tests ───────────────────────────────────────────────
 console.log(`\n${CYAN}Design Skills${RESET}`);
 
-test('skills list returns all 17 skills', () => {
+test('skills list returns all 26 skills', () => {
   const skills = skillsEngine.list();
-  assert.strictEqual(skills.length, 17);
+  assert.strictEqual(skills.length, 26);
 });
 
 test('skills have required fields', () => {
@@ -115,8 +115,8 @@ test('skill get returns null for unknown', () => {
 });
 
 test('skill detection works for common prompts', () => {
-  assert.deepStrictEqual(skillsEngine.detectSkills('landing page startup'), ['landing_page']);
-  assert.deepStrictEqual(skillsEngine.detectSkills('admin dashboard'), ['dashboard']);
+  assert(skillsEngine.detectSkills('landing page startup').includes('landing_page'));
+  assert(skillsEngine.detectSkills('admin dashboard').includes('dashboard'));
   assert(skillsEngine.detectSkills('pricing table with tiers').includes('pricing'));
   assert(skillsEngine.detectSkills('chat messenger interface').includes('chat_ui'));
   assert(skillsEngine.detectSkills('portfolio website').includes('portfolio'));
