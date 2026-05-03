@@ -1,0 +1,8 @@
+node_modules/
+.env
+*.db
+.gentcodesign/
+dist/
+coverage/
+*.log
+.DS_Store

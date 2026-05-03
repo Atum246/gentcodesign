@@ -1,0 +1,49 @@
+{
+  "name": "gentcodesign",
+  "version": "1.0.0",
+  "description": "Agent-native AI design engine. Prompt → prototypes, slides, dashboards. Built for AI agents like OpenClaw, Claude Code, and more.",
+  "main": "src/index.js",
+  "bin": {
+    "gentcodesign": "./bin/cli.js",
+    "gcd": "./bin/cli.js"
+  },
+  "scripts": {
+    "start": "node bin/cli.js",
+    "serve": "node src/api/server.js",
+    "test": "node test/test.js",
+    "generate": "node bin/cli.js generate"
+  },
+  "keywords": [
+    "ai-design",
+    "agent",
+    "prototype",
+    "code-generation",
+    "openclaw",
+    "claude-code",
+    "design-engine",
+    "html-generator",
+    "slides",
+    "dashboard"
+  ],
+  "author": "GentCoDesign Contributors",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.0",
+    "cors": "^2.8.5",
+    "better-sqlite3": "^11.7.0",
+    "marked": "^15.0.0",
+    "handlebars": "^4.7.8",
+    "archiver": "^7.0.1",
+    "puppeteer": "^24.0.0",
+    "pptxgenjs": "^3.12.0",
+    "uuid": "^11.1.0",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1",
+    "commander": "^12.1.0",
+    "open": "^8.4.2",
+    "sharp": "^0.33.5",
+    "svg2png": "^4.1.1",
+    "highlight.js": "^11.11.0",
+    "dotenv": "^16.4.7"
+  }
+}
