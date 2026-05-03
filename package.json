@@ -4,8 +4,8 @@
   "description": "Agent-native AI design engine. Prompt → prototypes, slides, dashboards. Built for AI agents like OpenClaw, Claude Code, and more.",
   "main": "src/index.js",
   "bin": {
-    "gentcodesign": "./bin/cli.js",
-    "gcd": "./bin/cli.js"
+    "gentcodesign": "bin/cli.js",
+    "gcd": "bin/cli.js"
   },
   "files": [
     "bin/",
@@ -47,7 +47,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/OpenCoworkAI/gentcodesign.git"
+    "url": "git+https://github.com/OpenCoworkAI/gentcodesign.git"
   },
   "homepage": "https://github.com/OpenCoworkAI/gentcodesign",
   "bugs": {
