@@ -579,6 +579,6 @@ function createSpinner(text) {
 // ─── Parse & Run ────────────────────────────────────────────────
 program
   .name('gentcodesign')
-  .version('1.0.0')
+  .version(require('../package.json').version)
   .description('🎨 GentCoDesign — Agent-Native AI Design Engine')
   .parse(process.argv);
