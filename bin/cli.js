@@ -28,10 +28,11 @@ const gcd = require('../src/index');
 
 // ─── Banner ─────────────────────────────────────────────────────
 function banner() {
+  const pkgVersion = require('../package.json').version;
   console.log(chalk.cyan.bold(`
   ╔═══════════════════════════════════════════╗
   ║                                           ║
-  ║   🎨  GentCoDesign  v1.0.0               ║
+  ║   🎨  GentCoDesign  v${pkgVersion.padEnd(19)}║
   ║   Agent-Native AI Design Engine           ║
   ║                                           ║
   ║   Your prompts → Stunning prototypes      ║
