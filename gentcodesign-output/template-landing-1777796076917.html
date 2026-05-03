@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Build Something Amazing</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--accent:#6366f1;--bg:#0a0a0f;--fg:#f0f0f5;--muted:#6b7280;--card:#141420;--border:#1e1e30}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.logo{font-size:1.5rem;font-weight:800;background:linear-gradient(135deg,var(--accent),#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--fg)}
+.hero{text-align:center;padding:120px 0 80px}
+.hero h1{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:800;line-height:1.1;margin-bottom:24px;background:linear-gradient(135deg,var(--fg) 0%,var(--accent) 50%,#a855f7 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{font-size:1.25rem;color:var(--muted);max-width:600px;margin:0 auto 40px}
+.btn{display:inline-block;padding:14px 32px;background:var(--accent);color:white;border:none;border-radius:12px;font-size:1.1rem;font-weight:600;cursor:pointer;transition:all .3s;text-decoration:none}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(99,102,241,.4)}
+.btn-outline{background:transparent;border:2px solid var(--accent);color:var(--accent)}
+.btn-outline:hover{background:var(--accent);color:white}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;padding:80px 0}
+.feature-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:32px;transition:all .3s}
+.feature-card:hover{transform:translateY(-4px);border-color:var(--accent)}
+.feature-icon{font-size:2.5rem;margin-bottom:16px}
+.feature-card h3{font-size:1.25rem;margin-bottom:8px}
+.feature-card p{color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;padding:60px 0;text-align:center;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.stat h2{font-size:2.5rem;font-weight:800;color:var(--accent)}
+.stat p{color:var(--muted);margin-top:4px}
+.testimonials{padding:80px 0}
+.testimonials h2{text-align:center;font-size:2rem;margin-bottom:48px}
+.testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.testimonial{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:32px}
+.testimonial p{font-style:italic;margin-bottom:16px;color:var(--muted)}
+.testimonial .author{font-weight:600;color:var(--fg)}
+.cta-section{text-align:center;padding:100px 0;background:linear-gradient(135deg,rgba(99,102,241,.1),rgba(168,85,247,.1));border-radius:32px;margin:40px 0}
+.cta-section h2{font-size:2.5rem;margin-bottom:16px}
+.cta-section p{color:var(--muted);margin-bottom:32px}
+footer{text-align:center;padding:40px 0;color:var(--muted);font-size:.9rem;border-top:1px solid var(--border)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.hero,.features,.stats,.testimonials,.cta-section{animation:fadeUp .8s ease-out both}
+.features{animation-delay:.2s}.stats{animation-delay:.3s}
+</style>
+</head>
+<body>
+<div class="container">
+<nav><div class="logo">✦ Brand</div><ul class="nav-links"><li><a href="#">Product</a></li><li><a href="#">Pricing</a></li><li><a href="#">Docs</a></li><li><a href="#">Blog</a></li></ul></nav>
+<section class="hero"><h1>Build Something Amazing</h1><p>The modern platform for teams who ship fast</p><a href="#" class="btn">Get Started Free</a> <a href="#" class="btn btn-outline" style="margin-left:12px">Learn More</a></section>
+<section class="features">
+<div class="feature-card"><div class="feature-icon">⚡</div><h3>Lightning Fast</h3><p>Built for speed. Every interaction feels instant, every page loads in milliseconds.</p></div>
+<div class="feature-card"><div class="feature-icon">🔒</div><h3>Enterprise Security</h3><p>SOC2 compliant, end-to-end encryption, and role-based access control out of the box.</p></div>
+<div class="feature-card"><div class="feature-icon">🔌</div><h3>200+ Integrations</h3><p>Connect with every tool your team already uses. Slack, GitHub, Jira, and more.</p></div>
+<div class="feature-card"><div class="feature-icon">📊</div><h3>Real-time Analytics</h3><p>Understand your users with beautiful dashboards and actionable insights.</p></div>
+<div class="feature-card"><div class="feature-icon">🤖</div><h3>AI-Powered</h3><p>Smart suggestions, automated workflows, and intelligent error detection.</p></div>
+<div class="feature-card"><div class="feature-icon">🌍</div><h3>Global Scale</h3><p>Deploy to 40+ regions worldwide. Serve millions with 99.99% uptime.</p></div>
+</section>
+<section class="stats"><div class="stat"><h2>10K+</h2><p>Active Teams</p></div><div class="stat"><h2>99.9%</h2><p>Uptime SLA</p></div><div class="stat"><h2>50M+</h2><p>API Calls/Day</p></div><div class="stat"><h2>4.9★</h2><p>User Rating</p></div></section>
+<section class="testimonials"><h2>Loved by Teams Worldwide</h2><div class="testimonial-grid">
+<div class="testimonial"><p>"This transformed how our engineering team works. We shipped 3x faster in the first month."</p><div class="author">— Sarah Chen, CTO at TechFlow</div></div>
+<div class="testimonial"><p>"The best investment we made this year. ROI was visible within weeks."</p><div class="author">— Marcus Johnson, VP Engineering at Scale</div></div>
+<div class="testimonial"><p>"Finally, a tool that developers actually enjoy using. The DX is unmatched."</p><div class="author">— Priya Patel, Lead Dev at CloudNine</div></div>
+</div></section>
+<section class="cta-section"><h2>Ready to Transform Your Workflow?</h2><p>Join thousands of teams already shipping faster.</p><a href="#" class="btn">Start Free Trial</a></section>
+<footer><p>© 2026 Brand. All rights reserved. · Privacy · Terms · Status</p></footer>
+</div>
+</body>
+</html>

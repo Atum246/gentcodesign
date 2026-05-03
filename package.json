@@ -1,6 +1,6 @@
 {
   "name": "gentcodesign",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Agent-native AI design engine. Prompt → prototypes, slides, dashboards. Built for AI agents like OpenClaw, Claude Code, and more.",
   "main": "src/index.js",
   "bin": {
@@ -21,6 +21,7 @@
     "serve": "node src/api/server.js",
     "test": "node test/test.js",
     "generate": "node bin/cli.js generate",
+    "postinstall": "node bin/postinstall.js",
     "prepublishOnly": "npm test"
   },
   "keywords": [
